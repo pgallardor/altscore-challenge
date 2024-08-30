@@ -60,8 +60,8 @@ app.get("/phase-change-diagram", (req: Request, res: Response) => {
     }
 
     return res.status(HttpCode.OK).json({
-        "specific_volume_liquid": parseFloat(liquidLine(pressure).toFixed(5)),
-        "specific_volume_vapor": parseFloat(vaporLine(pressure).toFixed(5))
+        "specific_volume_liquid": parseFloat(liquidLine(pressure).toFixed(16)),
+        "specific_volume_vapor": parseFloat(vaporLine(pressure).toFixed(16))
     })
 })
 
